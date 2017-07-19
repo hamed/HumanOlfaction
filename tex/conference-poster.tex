@@ -43,6 +43,8 @@
 \setlength{\columnsep}{1.5em} % Slightly increase the space between columns
 \setlength{\columnseprule}{0mm} % No horizontal rule between columns
 
+\usepackage{booktabs}
+
 \usepackage{verbatim}
 \usepackage[english]{babel}
 \usepackage{times}
@@ -100,7 +102,7 @@ linewidth=2pt % Width of the border lines around content boxes
 %----------------------------------------------------------------------------------------
 %
 {\includegraphics[height=5em]{fig/ICTP_logo}} % First university/lab logo on the left
-{\huge \textsc{Odorant receptors are sensitive to molecular volume of odorants}} % Poster title
+{\huge \textsc{Odorant receptors are sensitive to molecular volume}} % Poster title
 {\textsc{ Majid Saberi, Ali reza Vafaei Sadr, \bf{Hamed Seyed-allaei} \vspace{0.5em} }(hamed@ipm.ir)}
 {\includegraphics[height=5em]{fig/logo.jpg}} % First university/lab logo on the 
 %\affiliation{G. Mill\'an Institute of Fluid Dynamics, Nanoscience and Industrial
@@ -134,20 +136,19 @@ linewidth=2pt % Width of the border lines around content boxes
 %----------------------------------------------------------------------------------------
 
 \headerbox{Abstract}{name=abstract,column=0,row=0}{
-Which properties of a molecule define its odor? This is a basic question of olfaction, 
-yet to be answered. Human olfactory system has a repertoire of about 350 olfactory receptors. 
+%Which properties of a molecule define its odor? This is a basic question of olfaction, 
+%yet to be answered. 
+Human olfactory system has a repertoire of about 350 olfactory receptors. 
 Molecules bind to them with different affinities and activate them with different efficacies, 
 resulting in a combinatorial code that identifies odorants. 
 We hypothesized that the binding affinity between a pair of odorant-receptor is affected by their relative sizes. 
 The affinity can reaches its maximum if molecular volume of an odorant matches volume of a receptor's binding-pocket 
 and it reach zero if the sizes are too different, 
 obscuring the effect of other molecular properties. 
-We formulated this hypothesis mathematically and verified it on Data of Drosophila, 
-and predicted the volume and the structural flexibility of each receptor's binding-site, 
-which are significantly different among receptors. 
-This provides a reason for differences in smell among similar molecules of different sizes. 
-
-
+We formulated this hypothesis mathematically and verified it on experimental data.
+%and predicted the volume and the structural flexibility of each receptor's binding-site, 
+%which are significantly different among receptors. 
+%This provides a reason for differences in smell among similar molecules of different sizes. 
 
 \vspace{0.3em} % When there are two boxes, some whitespace may need to be added if the one on the right has more content
 }
@@ -157,7 +158,7 @@ This provides a reason for differences in smell among similar molecules of diffe
 %----------------------------------------------------------------------------------------
 
 \headerbox{References}{name=references,column=2,above=bottom}{
-
+\small
 \renewcommand{\section}[2]{\vskip 0.05em} % Get rid of the default "References" section title
 %\nocite{} % Insert publications even if they are not cited in the poster
 %\small{ % Reduce the font size in this block
@@ -165,13 +166,28 @@ This provides a reason for differences in smell among similar molecules of diffe
 %\bibliography{sample} % Use sample.bib as the bibliography file
  \begin{thebibliography}{1}
 
-  \bibitem{saberi} Majid Saberi, Hamed Seyed-allaei, {\em Olfactory receptors are sensitive to molecular volume of odorants.}, 2015, bioRxiv, DOI:http://dx.doi.org/10.1101/013516 
+  \bibitem{saberi} Majid Saberi, Hamed Seyed-allaei, {
+  Odorant receptors of Drosophila are sensitive to the molecular volume of odorants.}, 
+  2016, Scientific Reports 6, DOI:10.1038/srep25103
 
-  \bibitem{galizia} Galizia CG {\em et al.}, {\em Integrating heterogeneous odor response data into a common response model: A DoOR to the complete olfactome.}, 2010, Chemical Senses, DOI:10.1093/chemse/bjq042
+  \bibitem{galizia} Galizia CG {\em et al.}, { Integrating heterogeneous odor response data into a common response model: A DoOR to the complete olfactome.}, 2010, Chemical Senses, DOI:10.1093/chemse/bjq042
 
-  \bibitem{Pedretti} Pedretti {\em et al.}, {\em VEGA - An open platform to develop chemo-bio-informatics applications, using plug-in architecture and script programming.}, 2004, Journal of Computer-Aided Molecular Design, DOI:10.1023/B:JCAM.0000035186.90683.f2
+ \bibitem{munch} Daniel Munch, C. Giovanni Galizia, {
+DoOR 2.0 - Comprehensive Mapping of Drosophila melanogaster Odorant Responses.},
+2016, Scientific Reports 6, DOI:10.1038/srep21841
 
-%  \bibitem{zarzo} Manuel Zarzo, {\em Hedonic judgments of chemical compounds are correlated with molecular size.}, 2011, Sensors, DOI:10.3390/s110403667
+ \bibitem{mainland}  Joel D Mainland {\em et al.}, {
+Human olfactory receptor responses to odorants.},
+2015, Scientific Data 2, DOI:10.1038/sdata.2015.2
+
+ \bibitem{keller}  Keller {\em et al.}, {
+ Predicting human olfactory perception from chemical features of odor molecules.},
+2017, Science, DOI: 10.1126/science.aal2014. 
+
+
+  \bibitem{Pedretti} Pedretti {\em et al.}, { VEGA - An open platform to develop chemo-bio-informatics applications, using plug-in architecture and script programming.}, 2004, Journal of Computer-Aided Molecular Design, DOI:10.1023/B:JCAM.0000035186.90683.f2
+
+ \bibitem{zarzo} Manuel Zarzo, {\em Hedonic judgments of chemical compounds are correlated with molecular size.}, 2011, Sensors, DOI:10.3390/s110403667
 
   \end{thebibliography}
 %}
@@ -181,22 +197,22 @@ This provides a reason for differences in smell among similar molecules of diffe
 %	CONTACT INFORMATION
 %----------------------------------------------------------------------------------------
 
-\headerbox{Contact Information}{name=contact,column=0,above=bottom}{ % This block is as tall as the references block
+%\headerbox{Contact Information}{name=contact,column=0,above=bottom}{ % This block is as tall as the references block
 
-\begin{description}\compresslist
-\item[Address] School of Cognitive Science,  Institute for Research in Fundamental Sciences (IPM),  Tehran, Iran
-\item[Email] hamed@ipm.ir
-\end{description}
-\begin{center}
-%\includegraphics[height=20mm]{fig/code.png}
-\end{center}
-}
+%\begin{description}\compresslist
+%\item[Address] School of Cognitive Science,  Institute for Research in Fundamental Sciences (IPM),  Tehran, Iran
+%\item[Email] hamed@ipm.ir
+%\end{description}
+%\begin{center}
+%%\includegraphics[height=20mm]{fig/code.png}
+%\end{center}
+%}
 
 %----------------------------------------------------------------------------------------
 %	Introduction
 %----------------------------------------------------------------------------------------
 
-\headerbox{Assumptions}{name=assumptions,column=0,below=abstract}{ % This block's bottom aligns with the bottom of the conclusion block
+\headerbox{Assumptions}{name=assumptions,column=0, below=abstract}{ % This block's bottom aligns with the bottom of the conclusion block
 
 %Survival of many species depends on their olfactory system. 
 %They use it  to find food, 
@@ -277,23 +293,21 @@ When an odorant binds to a receptor, one of the following might happen:
 \includegraphics[width=0.65 \textwidth]{fig/binding-pocket-size} \\
 \end{center}
 Misfit because of small volume of molecule, perfect match and misfit because of large molecular volume.
-
 \begin{center}
 \includegraphics[width=0.65 \textwidth]{fig/binding-pocket-flex}
 \end{center}
-
 The flexibility of a receptor may compensate for the volume mismatches. 
 The red disks are odorant molecule, 
 and the blue shapes are olfactory receptor and binding-pocket.
 
 Let assume the response $r_{nm}$ depends on the molecular volume of the odorant, $v_m$, and other physio-chemical properties of the molecule $m$; 
 We assume that we can separate the response $r_{nm}$ into two terms:
-{\huge
+%{\huge
 \begin{equation}
 	r_{nm} = f_n(v_m) \psi_{nm}.
 	\label{eqn:factors}
 \end{equation}
-}
+%}
 The first term, $f_n(v_m)$, depends only on the molecular volume of odorants.
 The second term, $\psi_{nm}$ include every other influential properties of molecules, but the molecular volume.
 Both terms are characteristic of each receptor, and they might vary from neuron to neuron.
@@ -305,124 +319,42 @@ Both terms are characteristic of each receptor, and they might vary from neuron 
 %	THE MATERIALS
 %----------------------------------------------------------------------------------------
 
-\headerbox{Materials}{name=materials,column=0,below=assumptions,above=contact}{
-
-\begin{center}
-%\includegraphics[width=0.1 \textwidth]{fig/DoOR-logo}
-\hfill
-%\includegraphics[height=0.1 \textwidth]{fig/VEGAZZ-logo}
-\hfill
-%\includegraphics[height=0.1 \textwidth]{fig/R_logo}
-\end{center}
-We take the neural data of DoOR database \cite{galizia} and we calculate molecular volume using a computational chemistry software -- VEGA ZZ~\cite{Pedretti}. 
-We used  GNU R to analyze the data.
-DoOR database can be summarized in an $N\times M$($55\times 251$) matrix. 
-Its elements, $r_{nm}$, are the response of neuron $n$ to odorant $m$. 
-This matrix is normalized between 0 and 1 so we have $0 \le r_{nm} \le 1$, where 1 is the strongest response.
-The only problem is that this matrix has many {\it Not Available} (NA) values, ~71\%,   
-and different neurons are excited by different set of odorants. 
-
-\begin{center}
-%\includegraphics[width=0.45 \textwidth]{fig/hist-volumes}
-\end{center}
-Density function of molecular volumes $g(v)$, considering all molecules of DoOR database. 
-The solid line is a Gaussian fit (Eq. \ref{eqn:hist-volumes}) and the dashed line shows the median, 
-which is slightly different from  the mean.
-
-}
+%\headerbox{Materials}{name=materials,column=0,below=assumptions}{
+%
+%\begin{center}
+%%\includegraphics[width=0.1 \textwidth]{fig/DoOR-logo}
+%\hfill
+%%\includegraphics[height=0.1 \textwidth]{fig/VEGAZZ-logo}
+%\hfill
+%%\includegraphics[height=0.1 \textwidth]{fig/R_logo}
+%\end{center}
+%We take the neural data of DoOR database \cite{galizia} and we calculate molecular volume using a computational chemistry software -- VEGA ZZ~\cite{Pedretti}. 
+%We used  GNU R to analyze the data.
+%DoOR database can be summarized in an $N\times M$($55\times 251$) matrix. 
+%Its elements, $r_{nm}$, are the response of neuron $n$ to odorant $m$. 
+%This matrix is normalized between 0 and 1 so we have $0 \le r_{nm} \le 1$, where 1 is the strongest response.
+%The only problem is that this matrix has many {\it Not Available} (NA) values, ~71\%,   
+%and different neurons are excited by different set of odorants. 
+%
+%\begin{center}
+%%\includegraphics[width=0.45 \textwidth]{fig/hist-volumes}
+%\end{center}
+%Density function of molecular volumes $g(v)$, considering all molecules of DoOR database. 
+%The solid line is a Gaussian fit (Eq. \ref{eqn:hist-volumes}) and the dashed line shows the median, 
+%which is slightly different from  the mean.
+%
+%}
 
 %----------------------------------------------------------------------------------------
 %	THE METHODS
 %----------------------------------------------------------------------------------------
 
-\headerbox{Methods}{name=methods,column=1, below=ptitle
+\headerbox{Experiment}{name=experiment,column=0, below=assumptions
 %,row=0, bottomaligned=assumptions
 }{
-\tiny
+\includegraphics{fig/mainland.jpg}
 
-%We want to study the relation between neural responses and molecular volumes, 
-%so we need the respective data. 
-%We take the neural data of DoOR database \cite{Galizia2010} and we calculate molecular volume (supplemental file odorants.csv) using a computational chemistry software -- VEGA ZZ~\cite{Pedretti2004}. 
-%We used  GNU R to analyze the data~\cite{Rlanguage}.
-%
-%DoOR database can be summarized in an $N\times M$ matrix. 
-%Its elements, $r_{nm}$, are the response of neuron $n$ to odorant $m$. 
-%This matrix is normalized between 0 and 1 so we have $0 \le r_{nm} \le 1$, where 1 is the strongest response.
-%The only problem is that this matrix has many {\it Not Available} (NA) values, 
-%and different neurons are excited by different set of odorants, 
-%so  when summing over $m$, $\sum_m$, we are calculating $\sum_{m: r_{nm} \neq \text{NA}}$, 
-%but for simplicity, 
-%we use the former notation. 
-%
-In fact, the first term, $f_n(v)$, is the tuning curve of neuron $n$ in respect to the molecular volumes, 
-it can be approximated with a Gaussian function
-\begin{equation}
-	\displaystyle f_n(v) = e^{-\frac{(v-v_n)^2}{2\sigma^2_n}}, 
-	\label{eqn:volume-dependence}
-\end{equation}
-where, $v_n$ is the preferred molecular volume of receptor $n$ and $\sigma_n$ represents its flexibility. 
-Here we want to estimate $v_n$ and $\sigma_n$. 
-To do so, first we calculate the response weighted average of molecular volumes, 
-$\frac{\sum_{m} v_m r_{nm}}{\sum_{m} r_{nm}}$ and then we use (\ref{eqn:factors}):
-\begin{equation}
-	\frac{\displaystyle \sum_{m} v_m r_{nm}}{\displaystyle \sum_{m} r_{nm}} = \frac{\displaystyle \sum_{m} v_m f_n(v_m) \psi_{nm}}{\displaystyle \sum_{m} f_n(v_m) \psi_{nm}}.
-	\label{eqn:sta}
-\end{equation}
-Here we can approximate $\sum$ with $\int$, which is common in statistical physics:
-\begin{equation}
-	\sum_{m} \dots f_n(v_m) \psi_{nm} \approx  \langle \psi_{nm} \rangle_m \int_0^\infty \dots f_n(v) g(v)  dv. 
-	\label{eqn:sigma_to_int}
-\end{equation}
-In which, 
-$\langle \psi_{nm} \rangle_m$ denotes the average of $\psi_{nm}$ over all $m: r_{nm} \neq \text{NA}$. 
-It can be moved out of the integral for it is independent of $v$.
-In the above equation, 
-$g(v)$ is the density of states, $g(v) dv$ indicates how many molecules have a molecular volume in the range of $v$ and $v+dv$.
-This function can be approximated by a Gaussian function:  
-\begin{equation}
-	g(v) = e^{-\frac{(v- v_{g})^2}{2 \sigma_{g}^2}},
-	\label{eqn:hist-volumes}
-\end{equation}
-ideally, $g(v)$ should not depend on the neuron $n$, 
-it is the property of ensemble of odorant molecules, not neurons. 
-But here, we have many missing values ($r_{nm} = NA$), 
-so we have to calculate $g(v)$ for each neuron separately; 
-Therefore, $v_{g_n}$ and $\sigma_{g_n}$ are the average and standard deviation of molecular volume while $r_{nm} \neq \text{NA}$.
-Now we rewrite equation (\ref{eqn:sta}) using equation (\ref{eqn:sigma_to_int}):
-\begin{equation}
-	\frac{\displaystyle \sum_{m} v_m r_{nm}}{\displaystyle \sum_{m} r_{nm}} \approx \frac{\displaystyle \int v f_n(v) g_n(v) dv}{\displaystyle \int f_n(v) g_n(v) dv}.
-	\label{eqn:sta_int}
-\end{equation}
-We replace the product of $f_n(v)$ and $g_n(v)$ in the above equation with $h_n(v) = f_n(v) g_n(v)$, to make a simpler form
-\begin{equation}
-	\frac{\displaystyle \sum_{m} v_m r_{nm}}{\displaystyle \sum_{m} r_{nm}} \approx \frac{\displaystyle \int_v v h_n(v) dv}{ \displaystyle \int_v  h_n(v) dv }.
-	\label{eqn:mean}
-\end{equation}
-The function $h_n(v)$ is a Gaussian function because it is the product of two Gaussian functions, 
-\begin{equation}
-h_n(v) = e^{-\frac{(v-\mu_{h_n})^2}{2\sigma_{h_n}^2}}, 
-\end{equation}
-so the right hand side of equation \ref{eqn:mean} is nothing but $\mu_{h_n}$ and 
-in a similar way, we can calculate $\sigma_{h_n}$ from the neural data
-\begin{equation}
-	\mu_{h_n} \approx \frac{\displaystyle \sum_{m} v_m r_{nm}}{\displaystyle \sum_{m} r_{nm}}, 
-	\sigma_{h_n}^2 \approx \frac{\displaystyle \sum_{m} v_m^2 r_{nm}}{\displaystyle \sum_{m} r_{nm}} - \mu_{h_n}^2
-	\label{eqn:final_h}
-\end{equation}
-We knew the mean $v_{g_n}$ and standard deviation $\sigma_{g_n}$ of $g_n(v)$ from the molecular volumes of the ensembles of odorants. 
-We just calculated the mean $\mu_{h_n}$ and standard deviation $\sigma_{h_n}$ of $h_n(v)$ from the neural data.
-Now calculating the mean $v_n$ and the standard deviation $\sigma_n$ of $f_n(v)$ is trivial,
-first we calculate $\sigma_n$ from 
-\begin{equation}
-\large
-	\frac{1}{\sigma_n^2} = \frac{1}{\sigma^2_{h_n}}  - \frac{1}{\sigma^2_{g_n}}
-\end{equation}
-and then we calculate $v_n$: 
-\begin{equation}
-\large
-	\frac{v_n}{\sigma_n^2}  =    \frac{\mu_{h_n}}{\sigma^2_{h_n}} - \frac{v_{g_n}}{\sigma^2_{g_n}}.
-\end{equation}
-
+Figure and data from Mainland et al \cite{mainland}
 %Now we know the preferred volume $v_n$ of each receptor and also its flexibility $\sigma_n$.
 }
 
@@ -431,35 +363,40 @@ and then we calculate $v_n$:
 %	TESTS
 %----------------------------------------------------------------------------------------
 
-\headerbox{Tests}{name=tests,column=1,below=methods,above=references}{
-
-We calculate p-values by permutation test.
-\begin{align}
-Alternative:& \sigma_n  \neq \infty \\
-Null:& \sigma_n \rightarrow \infty 
-\end{align}
-so p-value is the probability of having $\sigma'_n\leq\sigma_n$, 
-where $\sigma_n$ is calculated from the original data, but $\sigma'_n$ calculated using permuted version.
-
-We are testing a hypothesis on  $\sim$60 olfactory receptors simultaneously. 
-If we use a simple threshold of 0.05 for the p-value of each receptor, we may have false positives. 
-To address this issue, multiple-comparison problem, 
-we use Bonferroni correction. 
-The problem with Bonferroni correction is that it may increases false negatives.
-This problem can be addressed using another method -- False Discovery Rate (FDR).
-We used both methods -- Bonferroni and FDR, as well as no correction. 
-
-We also want to show the diversity of volume and flexibility of binding pocket among receptors.
-To estimate the p-values, 
-we take any pair of receptors that was sensitive to molecular volume (\numberofreceptors receptors),
-calculate their difference, 
-use a permutation test and measure the probability of being different only by chance.
-
-
-
+\headerbox{Histograms}{name=histograms,column=1,below=ptitle}{
+\centering
+\includegraphics[width = \textwidth]{fig/raw_histogram}
+\includegraphics[width = \textwidth]{fig/cleaned_histogram}
+\includegraphics[width = \textwidth]{fig/normalized_histogram}
+}
+\headerbox{Correlations}{name=correlations, column=1,below=histograms}{\centering
+\begin{tabular}{|l|l|rr|rr|}
+\toprule
+    &      &       Luc &           &        RL &           \\ \hline
+    &      &      0.0  &      10.0 &      0.0  &      10.0 \\
+{} & Concentration &           &           &           &           \\
+\midrule
+Luc & 0.0  &  1.0 &  0.53 &  0.41 &  0.36 \\
+    & 10.0 &  0.53 &  1.0 & -0.004 &  0.07 \\ \hline
+RL & 0.0  &  0.41 & -0.004 &  1.0 &  0.88 \\
+    & 10.0 &  0.36 &  0.07 &  0.88 &  1.0 \\
+\bottomrule
+\end{tabular}
+}
+\headerbox{Gaussian Naive Bayes}{name=GNB, column=1,below=correlations}{
+\Large
+\begin{tabular}{|l|l|}
+\hline 
+features & accuracy \\ \hline
+$ln(\frac{Luc}{RL})$ & 0.83  \\ 
+$ln(Luc)$ & 0.91 \\
+$ln(Luc)$ and $ln(RL)$ & 0.90 \\ \hline
+\end{tabular}
 }
 
-
+\headerbox{Another Receptor}{name=Olfr73, column=1, below=GNB}{
+\includegraphics{ fig/Olfr73}
+}
 
 %----------------------------------------------------------------------------------------
 %	RESULTS AND DISCUSSIONS
